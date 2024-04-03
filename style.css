@@ -1,0 +1,132 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+.main-container{
+    width:100vw;
+    height:100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-container::before{
+    content:" Timer Application";
+    position: absolute;
+    width:70vw;
+    padding:10px;
+    color:white;
+    top:60px;
+    left:15vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    background: linear-gradient(to right, rgb(231, 84, 84), rgb(240, 50, 230));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.bg-black{
+    background-color: rgb(0, 0, 0);
+}
+
+.d-flex{
+    display:flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.app-container{
+    width:min(500px,50vw);
+    height:min(500px,50vh);
+    border-radius: 10px;
+    box-shadow: 3px 1px 102px rgb(245, 222, 173);
+    border:1px solid white;
+}
+
+.time{
+    width:min(350px, 40vw);
+    padding:10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    position: relative;
+    box-shadow: 1px 1px 52px rgb(255, 255, 255);
+}
+
+.time::before{
+    content:":";
+    position: absolute;
+    font-size:large;
+}
+
+.fs{
+    font-size:16px;
+}
+
+.bg-white{
+    background-color: white;
+    color:black;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.start,.pause,.reset{
+    padding:10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor:pointer;
+    width:max(70px,7vw);
+}
+
+.start{
+    background-color: green;
+    color:rgb(207, 241, 241);
+}
+
+.pause{
+    background-color: yellow;
+    color:rgb(0, 0, 0);
+}
+
+.reset{
+    background-color: red;
+    color:white;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.handler{
+    margin-top:30px;
+    width:min(300px,20vw);
+}
+
+@media (max-width:819px){
+    .handler{
+        flex-direction: column;
+    }
+    .start,.pause,.reset{
+        margin-top:10px;
+        padding:5px;
+    }
+}
+
+@media (max-width:380px){
+    .main-container::before{
+        top:20px;
+        font-size:30px;
+    }
+}
